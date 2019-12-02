@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: tech-and-solve-reto
+  jpa:  
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    open-in-view: false
+    properties:
+      hibernate.enable_lazy_load_no_trans: true
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database: mysql
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    
+logging:
+  level:
+    com.aerolinea: DEBUG
+
+server:
+  port: 8080
+  servlet:
+    context-path: /reto/aerolinea
+
+aerolinea:
+  region: us-east-1
+  engine: mysql
+  username: root
+  password: secret
+  conection-url: 127.0.0.1
+  conection-port: 33060
+    
+    
+  
+
+  
